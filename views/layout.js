@@ -5,7 +5,7 @@ module.exports = ({ content }) => {
       <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Ekart2</title>
+        <title>Ekart3</title>
         
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
         <link href="/css/main.css" rel="stylesheet">
