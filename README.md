@@ -1,3 +1,3 @@
 # Ekart
 
-A shopping App made in pure javascript with EJS.
+A static shopping app made in pure javascript with EJS.
