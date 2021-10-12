@@ -9,10 +9,19 @@ const cartsRouter = require('./routes/carts');
 const app = express();
 
 app.use(express.static('public'));
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: true }));
+
+var cookieAge = 3600000;  //1 hour in milliseconds
 app.use(
   cookieSession({
-    keys: ['lkasld235j']
+    name: 'session',
+    keys: ['lkasld235j'],
+    cookie:
+    {
+      //secure: true, //Ensures the browser only sends the cookie over HTTPS.
+      httpOnly: true, //a boolean indicating whether the cookie is only to be sent over HTTP(S)
+      maxAge: cookieAge //a number representing the milliseconds from Date.now() for expiry
+    }
   })
 );
 app.use(authRouter);
